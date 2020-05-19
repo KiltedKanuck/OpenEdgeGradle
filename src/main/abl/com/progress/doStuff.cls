@@ -16,7 +16,7 @@
         
         define variable result as character no-undo.
         assign
-            result = substitute("Hi &1", yourName)
+            result = substitute("Hello &1", yourName)
             .
 
         return result.
