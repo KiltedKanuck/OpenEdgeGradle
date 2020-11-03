@@ -69,5 +69,5 @@ task ablTest(type: AblUnit) {
 
 }
 
-defaultTasks 'clean', 'packageSRC', 'packageCode', 'ablTest'
+defaultTasks  'packageSRC', 'ablTest'
 
