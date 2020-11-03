@@ -54,17 +54,18 @@ task packageSRC(type: CreateProcedureLibrary){
     baseDir = "src/main/abl"
 
 }
+
 task ablTest(type: AblUnit) {
 
     dependsOn packageCode
 
-  source("src/test/abl")
-  include("**/*.cls")
-  destinationDir = "${buildDir}/tests"
-  writeLog = true
-  baseDir = "${buildDir}"
+    source("src/test/abl")
+    include("**/*.cls")
+    destinationDir = "${buildDir}/tests"
+    writeLog = true
+    baseDir = "${buildDir}"
 
-  propath = files("src/test/abl" , "${buildDir}/dist/${project.name}-${CLASSIFIER.toUpperCase()}-${VERSION}.pl")
+    propath = files("src/test/abl" , "${buildDir}/dist/${project.name}-${CLASSIFIER.toUpperCase()}-${VERSION}.pl")
 
 }
 
